@@ -127,3 +127,8 @@ function handleError(error){
 //17
 	var itemNameInput1 = $("<input id = 'textinput1'/>");
 	$("#textinput1").insertBefore(posts);
+//18
+	$("#textinput1").change(function(){
+		$.ajax('http://jsonplaceholder.typicode.com/posts?userId=' + $("#textinput1").val(), {
+		method: "GET"
+		}).then(function(data){
