@@ -17,4 +17,8 @@ $(document).ready(function() {
 	var itemNameInput = $("<input id = 'textinput'/>");
 	$("#dynamiccontent").append($(itemNameInput));
 
+//7th
+	var addButton = $("<button id = 'addbutton'/>").text("ADD");
+	$(".train").append($(addButton));	
+
 });
