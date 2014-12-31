@@ -124,4 +124,6 @@ function handleError(error){
 			}
 		});	
 	}
-
+//17
+	var itemNameInput1 = $("<input id = 'textinput1'/>");
+	$("#textinput1").insertBefore(posts);
