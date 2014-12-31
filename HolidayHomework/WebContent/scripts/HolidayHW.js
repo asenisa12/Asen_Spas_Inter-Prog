@@ -7,5 +7,8 @@ $(document).ready(function() {
 //3rd
 	console.log($("#col1 p").text());
 
+//4th
+	$("#menu-top-level-menu" ).append("<li id = 'menu-item-2915' class = 'menu-item-2915'><a>New Button</a></li>")
+
 
 });
