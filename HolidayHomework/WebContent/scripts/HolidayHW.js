@@ -25,4 +25,9 @@ $(document).ready(function() {
 	var addUL = $("<ul id = 'posts' />");
 	$("#dynamiccontent").append($(addUL));
 
+//9th
+	$(".menu-item-2915").click(function() {
+		alert("hello world");	
+	});
+
 });
