@@ -107,6 +107,20 @@ function handleError(error){
   		newElement.append(deleteButton);
 		$(deleteButton).click(function() {
 			alert("deleting");
-		}
+//16th		
+  			var confirm = confirm("Are you sure you want to delete this post?");
+			if(confirm == true) {
+				$.ajax('http://jsonplaceholder.typicode.com/posts/' + data.id, {
+				method: 'DELETE'
+			}).then(function() {
+				$.ajax('http://jsonplaceholder.typicode.com/posts/' + data.id, {
+					method: 'GET'
+				}).then(function() {}, function() {
+					deleteButton.parent().remove();
+				});
+			});
+			} else {
+				return;
+			}
+		});	
 	}
-});
