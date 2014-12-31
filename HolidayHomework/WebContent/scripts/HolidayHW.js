@@ -68,12 +68,27 @@ function handleError(error){
 	}).then(processResponse, handleError);
 
 //12th
+	var counter = 0;
 	$(addButton).click(function() {
+		counter++;
 		var name = itemNameInput.val();
 		if (!name) {
 			alert("you must enter text");
 			return;
 		}
-		itemNameInput.val("");
+//13th		
+		else {
+			$.ajax('http://jsonplaceholder.typicode.com/posts', {
+				method: 'POST',
+				data: {
+					title: 'title'+counter,
+					body: name,
+					userId: 1,
+				}
+			}).then(function(data) {
+				console.log("Data send successfully!\n"+data);
+			});
+			itemNameInput.val("");
+		 }
 	});
 });
