@@ -86,7 +86,16 @@ function handleError(error){
 					userId: 1,
 				}
 			}).then(function(data) {
-				console.log("Data send successfully!\n"+data);
+				
+//14th				$.ajax('http://jsonplaceholder.typicode.com/posts/' + data.id, {
+  					method: 'GET'
+				}).then(function(data) {
+					var posts = $("ul#posts");
+  					var newElement = $("<li/>");
+  					newElement.text(data.title);
+  					posts.append($('newElement'));
+				});
+				console.log(data);
 			});
 			itemNameInput.val("");
 		 }
