@@ -132,3 +132,5 @@ function handleError(error){
 		$.ajax('http://jsonplaceholder.typicode.com/posts?userId=' + $("#textinput1").val(), {
 		method: "GET"
 		}).then(function(data){
+//19			
+		posts.empty();
