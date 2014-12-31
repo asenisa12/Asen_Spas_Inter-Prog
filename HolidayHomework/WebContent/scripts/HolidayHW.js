@@ -41,5 +41,30 @@ $(document).ready(function() {
 			$("#col1").insertBefore($("#col2"))
 	});
 
+//11th
+function handleError(error){
+		console.error("error", error, arguments);
+	}
+	function appendToList(list, post) {
+		var newElement = $("<li/>");
+		newElement.text(post.title);
+		list.append(newElement);
+		return newElement;
+	}
+	function processResponse(response) {
+		var list = $("ul#posts");
+		var i = 0;
+
+		$.each(response, function() {
+			appendToList(list, this);
+			i++;
+			if(i == 5) {
+				return false;
+			}
+		});
+	}
+	$.ajax("http://jsonplaceholder.typicode.com/posts", {
+		method: "GET"
+	}).then(processResponse, handleError);
 
 });
