@@ -87,7 +87,8 @@ function handleError(error){
 				}
 			}).then(function(data) {
 				
-//14th				$.ajax('http://jsonplaceholder.typicode.com/posts/' + data.id, {
+//14th				
+				$.ajax('http://jsonplaceholder.typicode.com/posts/' + data.id, {
   					method: 'GET'
 				}).then(function(data) {
 					var posts = $("ul#posts");
@@ -95,9 +96,14 @@ function handleError(error){
   					newElement.text(data.title);
   					posts.append($('newElement'));
 				});
-				console.log(data);
+				console.log("Data send successfully!\n"+data);
 			});
 			itemNameInput.val("");
 		 }
 	});
+//15th
+	function deleteButton(data, newElement) {
+		var deleteButton = $("<button id = 'deletebutton'/>").text("X");
+  		newElement.append(deleteButton);
+	}
 });
