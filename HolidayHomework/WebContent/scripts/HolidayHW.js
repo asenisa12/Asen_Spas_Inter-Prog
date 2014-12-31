@@ -67,4 +67,13 @@ function handleError(error){
 		method: "GET"
 	}).then(processResponse, handleError);
 
+//12th
+	$(addButton).click(function() {
+		var name = itemNameInput.val();
+		if (!name) {
+			alert("you must enter text");
+			return;
+		}
+		itemNameInput.val("");
+	});
 });
