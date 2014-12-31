@@ -26,8 +26,20 @@ $(document).ready(function() {
 	$("#dynamiccontent").append($(addUL));
 
 //9th
+	var uuu = 0;
 	$(".menu-item-2915").click(function() {
-		alert("hello world");	
+		uuu++;
+		alert("hello world");
+		
 	});
+	
+//10th
+	$(".menu-item-2915").click(function() {
+		if(uuu%2 == true)
+			$("#col2").insertBefore($("#col1"))
+		if(uuu%2 == false)
+			$("#col1").insertBefore($("#col2"))
+	});
+
 
 });
