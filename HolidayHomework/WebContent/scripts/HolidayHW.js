@@ -21,4 +21,8 @@ $(document).ready(function() {
 	var addButton = $("<button id = 'addbutton'/>").text("ADD");
 	$(".train").append($(addButton));	
 
+//8th	
+	var addUL = $("<ul id = 'posts' />");
+	$("#dynamiccontent").append($(addUL));
+
 });
