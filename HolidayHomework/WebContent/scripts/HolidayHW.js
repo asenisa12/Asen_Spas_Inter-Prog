@@ -10,5 +10,7 @@ $(document).ready(function() {
 //4th
 	$("#menu-top-level-menu" ).append("<li id = 'menu-item-2915' class = 'menu-item-2915'><a>New Button</a></li>")
 
+//5th
+	$("#footer").prepend("<div id ='dynamiccontent' class = 'train'></div>")
 
 });
