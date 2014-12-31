@@ -13,4 +13,8 @@ $(document).ready(function() {
 //5th
 	$("#footer").prepend("<div id ='dynamiccontent' class = 'train'></div>")
 
+//6th
+	var itemNameInput = $("<input id = 'textinput'/>");
+	$("#dynamiccontent").append($(itemNameInput));
+
 });
