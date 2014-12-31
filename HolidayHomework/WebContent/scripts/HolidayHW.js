@@ -134,3 +134,13 @@ function handleError(error){
 		}).then(function(data){
 //19			
 		posts.empty();
+//20
+		$.each(data, function() {
+				var newElement = $("<li/>");
+				newElement.text(this.title);
+				posts.append(newElement);
+				deleteButton(data, newElement);
+			});
+		input.val("");
+	});
+});
