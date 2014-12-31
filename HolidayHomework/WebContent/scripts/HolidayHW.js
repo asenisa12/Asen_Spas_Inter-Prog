@@ -105,5 +105,8 @@ function handleError(error){
 	function deleteButton(data, newElement) {
 		var deleteButton = $("<button id = 'deletebutton'/>").text("X");
   		newElement.append(deleteButton);
+		$(deleteButton).click(function() {
+			alert("deleting");
+		}
 	}
 });
